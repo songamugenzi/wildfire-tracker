@@ -29,7 +29,45 @@ body {
   color: red;
 }
 
-.source {
+.source-api {
   text-decoration: underline;
-  color: #4c4c4c;
+  font-weight: lighter;
+}
+
+.location-info {
+  position: absolute;
+  top: 200px;
+  right: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 400px; 
+  min-height: 200px;
+  padding: 20px;
+  background-color: rgba(193, 213, 244, 0.879);
+  border-radius: 7px;
+  color: #171717;
+}
+
+.location-sources {
+  list-style-type: none;
+  padding: 0;
+}
+
+.location-title {
+  font-size: 1.3rem;
+}
+
+.sources-header {
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.src-id {
+  padding-top: 15px;
+}
+
+.src-url {
+  font-style: italic;
 }
