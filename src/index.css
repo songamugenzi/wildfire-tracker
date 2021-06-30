@@ -77,9 +77,9 @@ body {
   width: 400px; 
   min-height: 200px;
   padding: 20px;
-  background-color: rgba(193, 213, 244, 0.879);
+  background-color: rgba(60, 60, 60, 0.913);
   border-radius: 7px;
-  color: #171717;
+  color: #fffd;
 }
 
 .location-sources {
