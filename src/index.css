@@ -71,8 +71,7 @@ body {
   top: 200px;
   right: 60px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   width: 400px; 
   min-height: 200px;
@@ -80,6 +79,12 @@ body {
   background-color: rgba(60, 60, 60, 0.913);
   border-radius: 7px;
   color: #fffd;
+}
+
+.title-sources {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .location-sources {
@@ -102,4 +107,8 @@ body {
 
 .src-url {
   font-style: italic;
+}
+
+.close-icon {
+  font-size: 2em;
 }
