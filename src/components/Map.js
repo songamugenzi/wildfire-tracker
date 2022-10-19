@@ -9,6 +9,7 @@ const Map = ({ eventData, center, zoom }) => {
     "Google Map key not found. Retrive new key";
 
   const [locationInfo, setLocationInfo] = useState(null);
+  const [showModal, setShowModal] = useState(true);
 
   const markers = eventData.map((ev) => {
     if (ev.categories[0].id === "wildfires") {
@@ -17,9 +18,14 @@ const Map = ({ eventData, center, zoom }) => {
           key={ev.id}
           lng={ev.geometry[0].coordinates[0]}
           lat={ev.geometry[0].coordinates[1]}
-          onClick={() =>
-            setLocationInfo({ id: ev.id, title: ev.title, sources: ev.sources })
-          }
+          onClick={() => {
+            setLocationInfo({
+              id: ev.id,
+              title: ev.title,
+              sources: ev.sources,
+            });
+            setShowModal(true);
+          }}
         />
       );
     }
@@ -35,7 +41,13 @@ const Map = ({ eventData, center, zoom }) => {
       >
         {markers}
       </GoogleMapReact>
-      {locationInfo && <LocationInfoBox info={locationInfo} />}
+      {locationInfo && (
+        <LocationInfoBox
+          info={locationInfo}
+          showModal={showModal}
+          onClick={() => setShowModal(!showModal)}
+        />
+      )}
     </div>
   );
 };
