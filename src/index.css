@@ -74,41 +74,46 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   width: 400px; 
-  min-height: 200px;
+  max-height: 100px;
   padding: 20px;
-  background-color: rgba(60, 60, 60, 0.913);
+  background-color: rgba(64, 64, 64, 0.913);
   border-radius: 7px;
   color: #fffd;
 }
 
-.title-sources {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.location-sources {
+.location-source {
   list-style-type: none;
   padding: 0;
 }
 
 .location-title {
   font-size: 1.3rem;
+  margin: 0;
 }
 
-.sources-header {
-  text-decoration: underline;
+.source-info {
   font-weight: 400;
 }
 
 .src-id {
-  padding-top: 15px;
+  font-size: 10px;
 }
 
 .src-url {
-  font-style: italic;
+  color: #EE596A;
+  text-decoration: none;
+}
+
+.src-url:visited {
+  color: #F5A3AC; 
+}
+
+.src-url:hover {
+  color: #E71D36;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .close-icon {
-  font-size: 2em;
+  font-size: 30px;
 }

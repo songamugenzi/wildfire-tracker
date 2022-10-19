@@ -9,13 +9,21 @@ const LocationInfoBox = ({ info, showModal, onClick }) => {
     <>
       {showModal && (
         <div className="location-info">
-          <div className="title-sources">
+          <div>
             <h2 className="location-title">{info.title}</h2>
-            <ul className="location-sources">
-              <li className="sources-header">Source</li>
-              <li className="src-id">{sourceID}</li>
-              <li className="src-url">{sourceURL}</li>
-              <li className="src-id">Event Id: {info.id}</li>
+            <ul className="location-source">
+              <li className="source-info">
+                Reported by {sourceID} -{" "}
+                <a
+                  href={sourceURL}
+                  className="src-url"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  More details
+                </a>
+              </li>
+              <li className="src-id">Event ID: {info.id}</li>
             </ul>
           </div>
           <div className="close-container" onClick={onClick}>
